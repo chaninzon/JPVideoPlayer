@@ -646,12 +646,7 @@ shouldResumePlaybackWhenApplicationDidBecomeActiveFromResignActiveForURL:self.ma
 #pragma mark - AudioSession
 
 - (void)activeAudioSessionIfNeed {
-    AVAudioSessionCategory audioSessionCategory = AVAudioSessionCategoryPlayback;
-    if (self.delegate && [self.delegate respondsToSelector:@selector(videoPlayerManagerPreferAudioSessionCategory:)]) {
-        audioSessionCategory = [self.delegate videoPlayerManagerPreferAudioSessionCategory:self];
-    }
-    [AVAudioSession.sharedInstance setActive:YES error:nil];
-    [AVAudioSession.sharedInstance setCategory:audioSessionCategory error:nil];
+    // Do nothing
 }
 
 

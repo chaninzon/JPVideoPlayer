@@ -12,7 +12,7 @@
 #import "JPGCDExtensions.h"
 #import <pthread.h>
 
-extern uint64_t ap_dispatch_benchmark(size_t count, void (^block)(void));
+//extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
 
 void JPDispatchSyncOnMainQueue(void (^block)(void)) {
     if (!block) {
@@ -65,5 +65,5 @@ void JPDispatchAfterTimeIntervalInSecond(NSTimeInterval timeInterval, void (^blo
 }
 
 int64_t jp_dispatch_benchmark(size_t count, void (^block)(void)) {
-    return ap_dispatch_benchmark(count, block);
+    //return dispatch_benchmark(count, block);
 }
